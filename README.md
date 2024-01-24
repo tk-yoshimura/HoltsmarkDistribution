@@ -19,6 +19,7 @@ Since scaling and translations allow for standardization, standard parameters ar
 ![holtsmark2](figures/holtsmark2.svg)  
 ![holtsmark3](figures/holtsmark3.svg)  
 
+## Numerical Evaluation
 Using hypergeometric function, it's obtained as follows:  
 ![holtsmark4](figures/holtsmark4.svg)  
 
