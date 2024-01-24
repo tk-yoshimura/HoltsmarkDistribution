@@ -13,20 +13,20 @@ The Holtsmark distribution, like these distribution, has a closed-from expressio
 
 ## Definition
 The Holtsmark distribution, generalized to a stable distribution by introducing position and scale parameters, is as follows:  
-![holtsmark1](figures/holtsmark1.svg)
+![holtsmark1](figures/holtsmark1.svg)  
 
-Since scaling and translations allow for standardization, standard parameters are discussed here.
-![holtsmark2](figures/holtsmark2.svg)
-![holtsmark3](figures/holtsmark3.svg)
+Since scaling and translations allow for standardization, standard parameters are discussed here.  
+![holtsmark2](figures/holtsmark2.svg)  
+![holtsmark3](figures/holtsmark3.svg)  
 
-Using hypergeometric function, it's obtained as follows:
-![holtsmark4](figures/holtsmark4.svg)
+Using hypergeometric function, it's obtained as follows:  
+![holtsmark4](figures/holtsmark4.svg)  
 
-The following series expression can also be used:
-![holtsmark5](figures/holtsmark5.svg)
+The following series expression can also be used:  
+![holtsmark5](figures/holtsmark5.svg)  
 
-When x is large, the following equation can be used as an asymptotic expression:
-![holtsmark6](figures/holtsmark6.svg)
+When x is large, the following equation can be used as an asymptotic expression:  
+![holtsmark6](figures/holtsmark6.svg)  
 
 ## Reference
 [J.Holtsmark, "Uber die Verbreiterung von Spektrallinien" (1919)](https://zenodo.org/records/1424343)  
