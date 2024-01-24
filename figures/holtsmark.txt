@@ -1,0 +1,42 @@
+\begin{align*}
+  f(x; \mu, c):=\frac{1}{2 \pi} \int_{-\infty}^{\infty} \exp(i t \mu -|c t|^{3/2}) \exp(-i \pi t) 
+  \, dt 
+\end{align*}
+
+\begin{align*}
+  f(x):=f(x; \mu=0, c=1)
+\end{align*}
+
+\begin{align*}
+  f(x)=\frac{1}{\pi} \int_0^{\infty} \cos(x t) \exp(-t^{3/2}) \, dt
+\end{align*}
+
+\begin{align*}
+ f(x) = \frac{2}{3 \pi} \sum_{n=0}^{\infty} (-1)^n \Gamma \left(\frac{4n+2}{3} \right) \frac{x^{2n}}{(2n)!} 
+\end{align*}
+
+\begin{align*}
+ f(x) \sim \frac{1}{\pi} \sum_{n=1}^{\infty} (-1)^{(n+1)} \Gamma \left(\frac{3n+2}{2} \right) \sin \left( \frac{3 \pi n}{4} \right) \frac{x^{-(3n+2)/2}}{n!}
+\end{align*}
+
+\begin{align*}
+  g(x)=\frac{2}{\pi} \int_0^{\infty} t \sin(x t) \exp(-t^{3/2}) \, dt
+\end{align*}
+
+\begin{align*}
+  \frac{ \partial f(x) }{\partial x}=-\frac{1}{2} \frac{g(x)}{x}
+\end{align*}
+
+\begin{align*}
+ g(x) = - \frac{8 x}{3 \pi} \sum_{n=0}^{\infty} n (-1)^n \Gamma \left(\frac{4n+2}{3} \right) \frac{x^{2n-1}}{(2n)!} 
+\end{align*}
+
+\begin{align*}
+ g(x) \sim -\frac{x}{\pi} \sum_{n=1}^{\infty} (3n+2) (-1)^{n} \Gamma \left(\frac{3n+2}{2} \right) \sin \left( \frac{3 \pi n}{4} \right) \frac{x^{-(3n-4)/2}}{n!}
+\end{align*}
+
+\begin{eqnarray*}
+ f(x) &=& \frac{1}{\pi} \Gamma(5/3) {}_2 F_{3} \left( \frac{5}{12}, \frac{11}{12}; \frac{1}{3}, \frac{1}{2}, \frac{5}{6}; -\frac{4 x^6}{729} \right) \\
+  && - \frac{x^2}{3 \pi} {}_3 F_{4} \left( \frac{3}{4}, 1, \frac{5}{4}; \frac{2}{3}, \frac{5}{6}, \frac{7}{6}, \frac{4}{3}; -\frac{4 x^6}{729} \right) \\
+  && + \frac{7 x^4}{81 \pi} \Gamma(4/3)  {}_2 F_{3} \left( \frac{13}{12}, \frac{19}{12}; \frac{7}{6}, \frac{3}{2}, \frac{5}{3}; -\frac{4 x^6}{729} \right) \\
+\end{eqnarray*}
