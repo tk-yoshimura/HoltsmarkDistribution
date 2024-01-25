@@ -53,8 +53,8 @@ nuget.exe
 nugetpack.bat
 /**/*.nuspec
 /**/*.nupkg
+/results_disused
 
 # Resource AutoGen
-DoubleDouble/Resource.Designer.cs
 
 # Safelist
