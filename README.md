@@ -29,6 +29,12 @@ The following series expression can also be used:
 When x is large, the following equation can be used as an asymptotic expression:  
 ![holtsmark6](figures/holtsmark6.svg)  
 
+Evaluating only one term of this equation yields the tail power of the distribution:
+![holtsmark7](figures/holtsmark7.svg)  
+
+## Numeric Table
+[PDF Precision 150](results/pdf_precision150.csv)  
+
 ## Reference
 [J.Holtsmark, "Uber die Verbreiterung von Spektrallinien" (1919)](https://zenodo.org/records/1424343)  
 [J.C.Pain "Expression of the Holtsmark function in terms of hypergeometric 2F2 and Airy Bi functions" (2010)](https://arxiv.org/abs/2001.11893)  

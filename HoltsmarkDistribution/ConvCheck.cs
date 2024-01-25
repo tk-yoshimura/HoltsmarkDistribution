@@ -1,8 +1,8 @@
 ﻿using MultiPrecision;
 
 namespace HoltsmarkDistribution {
-    internal class Program {
-        static void Main() {
+    internal class ConvCheck {
+        static void Main_() {
             using (StreamWriter sw = new("../../../../results_disused/convcheck_n16.txt")) {
 
                 for (double x = 0; x <= 64; x += 0.0625) {
