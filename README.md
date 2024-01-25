@@ -29,7 +29,7 @@ The following series expression can also be used:
 When x is large, the following equation can be used as an asymptotic expression:  
 ![holtsmark6](figures/holtsmark6.svg)  
 
-Evaluating only one term of this equation yields the tail power of the distribution:
+Evaluating only one term of this equation yields the tail power of the distribution:  
 ![holtsmark7](figures/holtsmark7.svg)  
 
 ## Numeric Table
