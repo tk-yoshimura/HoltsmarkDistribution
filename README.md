@@ -34,6 +34,7 @@ Evaluating only one term of this equation yields the tail power of the distribut
 
 ## Numeric Table
 [PDF Precision 150](results/pdf_precision150.csv)  
+[CDF Precision 150](results/cdf_precision150.csv)  
 
 ## Reference
 [J.Holtsmark, "Uber die Verbreiterung von Spektrallinien" (1919)](https://zenodo.org/records/1424343)  
