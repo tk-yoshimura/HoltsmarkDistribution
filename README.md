@@ -40,7 +40,7 @@ Evaluating only one term of this equation yields the tail power of the distribut
 [PDF Precision 150](results/pdf_precision150.csv)  
 [CDF Precision 150](results/cdf_precision150.csv)  
 
-## S &alpha; S Distributions
+## S&alpha;S Distributions
 ![sass-pdf](figures/sass_pdf.svg)  
 ![sass-pdf-loglog](figures/sass_pdf_loglog.svg)  
 
