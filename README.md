@@ -11,6 +11,10 @@ Such a distribution with &beta; = 0 is called symmetric alpha-stable distributio
 
 The Holtsmark distribution, like these distribution, has a closed-from expression, but it can't be expressed in terms of elementary function.  
 
+![pdf](figures/holtsmark_pdf.svg)  
+![pdf-loglog](figures/holtsmark_pdf_loglog.svg)  
+![cdf](figures/holtsmark_cdf.svg)  
+
 ## Definition
 The Holtsmark distribution, generalized to a stable distribution by introducing position and scale parameters, is as follows:  
 ![holtsmark1](figures/holtsmark1.svg)  
