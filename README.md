@@ -47,3 +47,6 @@ Evaluating only one term of this equation yields the tail power of the distribut
 ## Reference
 [J.Holtsmark, "Uber die Verbreiterung von Spektrallinien" (1919)](https://zenodo.org/records/1424343)  
 [J.C.Pain "Expression of the Holtsmark function in terms of hypergeometric 2F2 and Airy Bi functions" (2010)](https://arxiv.org/abs/2001.11893)  
+
+## See Also
+[SASPoint5Distribution](https://github.com/tk-yoshimura/SASPoint5Distribution)
