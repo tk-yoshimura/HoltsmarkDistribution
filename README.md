@@ -40,6 +40,10 @@ Evaluating only one term of this equation yields the tail power of the distribut
 [PDF Precision 150](results/pdf_precision150.csv)  
 [CDF Precision 150](results/cdf_precision150.csv)  
 
+## S &alpha; S Distributions
+![sass-pdf](figures/sass_pdf.svg)  
+![sass-pdf-loglog](figures/sass_pdf_loglog.svg)  
+
 ## Reference
 [J.Holtsmark, "Uber die Verbreiterung von Spektrallinien" (1919)](https://zenodo.org/records/1424343)  
 [J.C.Pain "Expression of the Holtsmark function in terms of hypergeometric 2F2 and Airy Bi functions" (2010)](https://arxiv.org/abs/2001.11893)  
