@@ -1,8 +1,8 @@
 ﻿using MultiPrecision;
 
 namespace HoltsmarkDistribution {
-    internal class ExpectedN16 {
-        static void Main() {
+    internal class ExpectedPDFN16 {
+        static void Main_() {
             using (StreamWriter sw = new("../../../../results/cdf_precision150.csv")) {
                 sw.WriteLine("x,cdf(x)-1/2,ccdf(x)");
 

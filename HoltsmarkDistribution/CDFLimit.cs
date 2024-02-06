@@ -55,7 +55,7 @@ namespace HoltsmarkDistribution {
             return gamma_table[n];
         }
 
-        private static MultiPrecision<M> CoefTable(int n) {
+        public static MultiPrecision<M> CoefTable(int n) {
             for (int k = coef_table.Count; k <= n; k++) {
                 MultiPrecision<M> c = GammaTable(k) * sin_table[k % 8] * TaylorSeries<M>.Table(k) / (3 * k);
                 coef_table.Add(c);
