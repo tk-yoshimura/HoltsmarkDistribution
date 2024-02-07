@@ -2,7 +2,7 @@
 
 namespace HoltsmarkDistribution {
     internal class EvalQuantilePadeN16 {
-        static void Main_() {
+        static void Main() {
             MultiPrecision<Pow2.N16> max_err = "1e-142";
 
             using (StreamWriter sw = new("../../../../results_disused/quantile_pade_eval.csv")) {

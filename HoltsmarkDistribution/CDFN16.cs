@@ -9,11 +9,11 @@ namespace HoltsmarkDistribution {
 
             x = MultiPrecision<Pow2.N16>.Abs(x);
 
-            if (x >= 13.4375) { 
+            if (x >= 13.4375) {
                 return CDFLimit<Pow2.N16, N24>.Value(x, complementary);
             }
 
-            if (x <= 10.625) { 
+            if (x <= 10.625) {
                 return CDFNearZero<Pow2.N16, N24>.Value(x, complementary);
             }
 

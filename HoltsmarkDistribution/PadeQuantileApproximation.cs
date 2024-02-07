@@ -54,7 +54,7 @@ namespace HoltsmarkDistribution {
 
                     Vector<Pow2.N64> xs = expecteds_range.Select(item => item.p - pmin).ToArray();
                     Vector<Pow2.N64> ys = expecteds_range.Select(item => item.y).ToArray();
-                                        
+
                     MultiPrecision<Pow2.N64> y0 = ys[0];
 
                     for (int coefs = 5; coefs <= 128; coefs++) {
@@ -78,9 +78,9 @@ namespace HoltsmarkDistribution {
                                 break;
                             }
 
-                            if (max_rateerr < "1e-145" && 
+                            if (max_rateerr < "1e-145" &&
                                 !CurveFittingUtils.HasLossDigitsPolynomialCoef(param[..m], 0, pmax - pmin) &&
-                                !CurveFittingUtils.HasLossDigitsPolynomialCoef(param[m..], 0, pmax - pmin)){
+                                !CurveFittingUtils.HasLossDigitsPolynomialCoef(param[m..], 0, pmax - pmin)) {
 
                                 sw.WriteLine($"p=[{pmin},{pmax}]");
                                 sw.WriteLine($"m={m},n={n}");
@@ -95,7 +95,7 @@ namespace HoltsmarkDistribution {
                                 }
 
                                 sw.WriteLine("coef");
-                                foreach ((var numer, var denom) in CurveFittingUtils.EnumeratePadeCoef(param, m, n)) { 
+                                foreach ((var numer, var denom) in CurveFittingUtils.EnumeratePadeCoef(param, m, n)) {
                                     sw.WriteLine($"(\"{numer:e150}\", \"{denom:e150}\"),");
                                 }
 

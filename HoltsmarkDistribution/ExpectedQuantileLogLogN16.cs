@@ -14,7 +14,7 @@ namespace HoltsmarkDistribution {
                         MultiPrecision<Pow2.N16> p = MultiPrecision<Pow2.N16>.Pow2(-u);
 
                         x = NewtonRaphsonFinder<Pow2.N16>.RootFind(
-                            x => (CDFPadeN16.Value(x, complementary: true) - p, -PDFPadeN16.Value(x)), 
+                            x => (CDFPadeN16.Value(x, complementary: true) - p, -PDFPadeN16.Value(x)),
                             x0: x, overshoot_decay: true
                         );
 

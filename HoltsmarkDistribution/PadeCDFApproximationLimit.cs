@@ -21,7 +21,7 @@ namespace HoltsmarkDistribution {
                         MultiPrecision<Pow2.N64> x = MultiPrecision<Pow2.N64>.Cbrt(u);
 
                         if (x != 0) {
-                            MultiPrecision<Pow2.N64> y = CDFN16.Value(1 / MultiPrecision<Pow2.N16>.Square(x.Convert<Pow2.N16>()), complementary: true).Convert<Pow2.N64>() 
+                            MultiPrecision<Pow2.N64> y = CDFN16.Value(1 / MultiPrecision<Pow2.N16>.Square(x.Convert<Pow2.N16>()), complementary: true).Convert<Pow2.N64>()
                                 / MultiPrecision<Pow2.N64>.Pow(x, 3);
 
                             expecteds_range.Add((u, y));

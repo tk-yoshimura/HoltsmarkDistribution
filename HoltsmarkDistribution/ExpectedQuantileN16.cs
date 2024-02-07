@@ -1,9 +1,8 @@
 ﻿using MultiPrecision;
-using MultiPrecisionRootFinding;
 
 namespace HoltsmarkDistribution {
     internal class ExpectedQuantileN16 {
-        static void Main() {
+        static void Main_() {
             using (StreamWriter sw = new("../../../../results/quantile_precision142.csv")) {
                 sw.WriteLine("quantile,x");
 
