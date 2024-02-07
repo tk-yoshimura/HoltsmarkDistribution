@@ -1553,7 +1553,9 @@ namespace HoltsmarkDistribution {
         }));
 
         public static MultiPrecision<Pow2.N16> Value(MultiPrecision<Pow2.N16> x, bool complementary = false) {
-            x = MultiPrecision<Pow2.N16>.Abs(x);
+            if (x < 0) {
+                return complementary ? 1 - Value(-x) : -Value(-x);
+            }
 
             if (x <= 1) {
                 MultiPrecision<Pow2.N16> y;
