@@ -51,6 +51,7 @@ Evaluating only one term of this equation yields the tail power of the distribut
 ## Numeric Table
 [PDF Precision 150](results/pdf_precision150.csv)  
 [CDF Precision 150](results/cdf_precision150.csv)  
+[Quantile Precision 142](results/quantile_precision142.csv)  
 
 ## S&alpha;S Distributions
 ![sass-pdf](figures/sass_pdf.svg)  
