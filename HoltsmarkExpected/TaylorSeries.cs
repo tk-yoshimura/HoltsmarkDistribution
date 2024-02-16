@@ -1,6 +1,6 @@
 ﻿using MultiPrecision;
 
-namespace HoltsmarkDistribution {
+namespace HoltsmarkExpected {
     public static class TaylorSeries<N> where N : struct, IConstant {
         private static readonly List<MultiPrecision<N>> table = [
             1,

@@ -1,8 +1,9 @@
-﻿using MultiPrecision;
+﻿using HoltsmarkExpected;
+using MultiPrecision;
 using MultiPrecisionAlgebra;
 using MultiPrecisionCurveFitting;
 
-namespace HoltsmarkDistribution {
+namespace HoltsmarkPadeCoefGeneration {
     internal class CDFPadeApproximation {
         static void Main_() {
             List<(MultiPrecision<Pow2.N64> xmin, MultiPrecision<Pow2.N64> xmax, MultiPrecision<Pow2.N64> limit_range)> ranges = [

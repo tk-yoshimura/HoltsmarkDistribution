@@ -1,6 +1,6 @@
 ﻿using MultiPrecision;
 
-namespace HoltsmarkDistribution {
+namespace HoltsmarkExpected {
     public static class PDFN16 {
         public static MultiPrecision<Pow2.N16> Value(MultiPrecision<Pow2.N16> x) {
             x = MultiPrecision<Pow2.N16>.Abs(x);

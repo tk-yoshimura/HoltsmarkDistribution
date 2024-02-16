@@ -3,7 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoltsmarkDistribution", "HoltsmarkDistribution\HoltsmarkDistribution.csproj", "{015C363C-BF4B-42BC-993C-3D62FC2CCE4E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoltsmarkExpected", "HoltsmarkExpected\HoltsmarkExpected.csproj", "{C37C916C-8426-4A2A-A67A-CD2F2CB31C7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoltsmarkEvalExpected", "HoltsmarkEvalExpected\HoltsmarkEvalExpected.csproj", "{6D541F5A-EAD5-4A12-B150-9BA55F49FB31}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C37C916C-8426-4A2A-A67A-CD2F2CB31C7F} = {C37C916C-8426-4A2A-A67A-CD2F2CB31C7F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoltsmarkPadeApprox", "HoltsmarkPadeApprox\HoltsmarkPadeApprox.csproj", "{676E577C-559D-4D1D-B584-98DD4EE3525E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoltsmarkEvalPadeApprox", "HoltsmarkEvalPadeApprox\HoltsmarkEvalPadeApprox.csproj", "{954AA1BF-3449-43D3-995B-59A586C4A654}"
+	ProjectSection(ProjectDependencies) = postProject
+		{676E577C-559D-4D1D-B584-98DD4EE3525E} = {676E577C-559D-4D1D-B584-98DD4EE3525E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoltsmarkPadeCoefGeneration", "HoltsmarkPadeCoefGeneration\HoltsmarkPadeCoefGeneration.csproj", "{E9A17A1B-A827-4865-9FDF-5AD4FA8C15CA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C37C916C-8426-4A2A-A67A-CD2F2CB31C7F} = {C37C916C-8426-4A2A-A67A-CD2F2CB31C7F}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +28,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{015C363C-BF4B-42BC-993C-3D62FC2CCE4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{015C363C-BF4B-42BC-993C-3D62FC2CCE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{015C363C-BF4B-42BC-993C-3D62FC2CCE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{015C363C-BF4B-42BC-993C-3D62FC2CCE4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C37C916C-8426-4A2A-A67A-CD2F2CB31C7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C37C916C-8426-4A2A-A67A-CD2F2CB31C7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C37C916C-8426-4A2A-A67A-CD2F2CB31C7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C37C916C-8426-4A2A-A67A-CD2F2CB31C7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D541F5A-EAD5-4A12-B150-9BA55F49FB31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D541F5A-EAD5-4A12-B150-9BA55F49FB31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D541F5A-EAD5-4A12-B150-9BA55F49FB31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D541F5A-EAD5-4A12-B150-9BA55F49FB31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{676E577C-559D-4D1D-B584-98DD4EE3525E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{676E577C-559D-4D1D-B584-98DD4EE3525E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{676E577C-559D-4D1D-B584-98DD4EE3525E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{676E577C-559D-4D1D-B584-98DD4EE3525E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{954AA1BF-3449-43D3-995B-59A586C4A654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{954AA1BF-3449-43D3-995B-59A586C4A654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{954AA1BF-3449-43D3-995B-59A586C4A654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{954AA1BF-3449-43D3-995B-59A586C4A654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9A17A1B-A827-4865-9FDF-5AD4FA8C15CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9A17A1B-A827-4865-9FDF-5AD4FA8C15CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9A17A1B-A827-4865-9FDF-5AD4FA8C15CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9A17A1B-A827-4865-9FDF-5AD4FA8C15CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,7 @@
-﻿using MultiPrecision;
+﻿using HoltsmarkExpected;
+using MultiPrecision;
 
-namespace HoltsmarkDistribution {
+namespace HoltsmarkEvalExpected {
     internal class ExpectedPDFN16 {
         static void Main_() {
             using (StreamWriter sw = new("../../../../results/cdf_precision150.csv")) {

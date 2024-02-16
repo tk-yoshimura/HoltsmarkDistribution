@@ -2,9 +2,9 @@
 using MultiPrecisionAlgebra;
 using MultiPrecisionCurveFitting;
 
-namespace HoltsmarkDistribution {
+namespace HoltsmarkPadeCoefGeneration {
     internal class PadeQuantileApproximation {
-        static void Main_() {
+        static void Main() {
             List<(MultiPrecision<Pow2.N64> pmin, MultiPrecision<Pow2.N64> pmax, MultiPrecision<Pow2.N64> limit_range)> ranges = [];
 
             for (MultiPrecision<Pow2.N64> pmin = 1; pmin < 8; pmin *= 2) {

@@ -1,7 +1,8 @@
-﻿using MultiPrecision;
+﻿using HoltsmarkPadeApprox;
+using MultiPrecision;
 using MultiPrecisionRootFinding;
 
-namespace HoltsmarkDistribution {
+namespace HoltsmarkEvalExpected {
     internal class ExpectedQuantileLogLogN16 {
         static void Main_() {
             using (StreamWriter sw = new("../../../../results_disused/quantile_precision150_loglog.csv")) {

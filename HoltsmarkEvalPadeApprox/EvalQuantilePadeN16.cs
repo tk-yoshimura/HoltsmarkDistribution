@@ -1,6 +1,8 @@
-﻿using MultiPrecision;
+﻿using HoltsmarkExpected;
+using HoltsmarkPadeApprox;
+using MultiPrecision;
 
-namespace HoltsmarkDistribution {
+namespace HoltsmarkEvalPadeApprox {
     internal class EvalQuantilePadeN16 {
         static void Main() {
             MultiPrecision<Pow2.N16> max_err = "1e-142";

@@ -1,6 +1,6 @@
 ﻿using MultiPrecision;
 
-namespace HoltsmarkDistribution {
+namespace HoltsmarkExpected {
     public class PDFNearZero<N, M> where N : struct, IConstant where M : struct, IConstant {
         private static readonly MultiPrecision<M> norm = MultiPrecision<M>.Div(2, 3 * MultiPrecision<M>.PI);
         private static readonly List<MultiPrecision<M>> gamma_table = [], coef_table = [];

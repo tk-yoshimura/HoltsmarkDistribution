@@ -1,11 +1,11 @@
 ﻿using MultiPrecision;
 
-namespace HoltsmarkDistribution {
+namespace HoltsmarkExpected {
     internal struct N24 : IConstant {
-        public int Value => 24;
+        public readonly int Value => 24;
     }
 
     internal struct N48 : IConstant {
-        public int Value => 48;
+        public readonly int Value => 48;
     }
 }

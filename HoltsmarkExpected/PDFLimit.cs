@@ -1,6 +1,6 @@
 ﻿using MultiPrecision;
 
-namespace HoltsmarkDistribution {
+namespace HoltsmarkExpected {
     public class PDFLimit<N, M> where N : struct, IConstant where M : struct, IConstant {
         private static readonly List<MultiPrecision<M>> gamma_table = [], coef_table = [];
         private static readonly List<MultiPrecision<M>> sin_table = [

@@ -1,7 +1,7 @@
 ﻿using MultiPrecision;
 using System.Collections.ObjectModel;
 
-namespace HoltsmarkDistribution {
+namespace HoltsmarkPadeApprox {
     public static class QuantilePadeN16 {
         private static readonly ReadOnlyCollection<(MultiPrecision<Pow2.N16> c, MultiPrecision<Pow2.N16> d)> pade_1_1p125 = new(Array.AsReadOnly(new (MultiPrecision<Pow2.N16> c, MultiPrecision<Pow2.N16>)[]{
             ("0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e0", "1.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e0"),

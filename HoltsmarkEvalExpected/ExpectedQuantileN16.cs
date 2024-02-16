@@ -1,8 +1,9 @@
-﻿using MultiPrecision;
+﻿using HoltsmarkPadeApprox;
+using MultiPrecision;
 
-namespace HoltsmarkDistribution {
+namespace HoltsmarkEvalExpected {
     internal class ExpectedQuantileN16 {
-        static void Main_() {
+        static void Main() {
             using (StreamWriter sw = new("../../../../results/quantile_precision142.csv")) {
                 sw.WriteLine("quantile,x");
 
