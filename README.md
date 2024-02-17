@@ -42,7 +42,7 @@ Evaluating only one term of this equation yields the tail power of the distribut
 |----|----|----|
 |mean|0||
 |mode|0||
-|median||
+|median|0||
 |variance|N/A|undefined|
 |0.75-quantile|0.9689331817135830052087863130496...||
 |0.9-quantile|2.061462638139193764464365388228...||
