@@ -42,11 +42,13 @@ Evaluating only one term of this equation yields the tail power of the distribut
 |----|----|----|
 |mean|0||
 |mode|0||
+|median||
 |variance|N/A|undefined|
 |0.75-quantile|0.9689331817135830052087863130496...||
 |0.9-quantile|2.061462638139193764464365388228...||
 |0.95-quantile|3.051940973238316697189330345356...|
 |0.99-quantile|7.736446206485418555263326182069...||
+|entropy|2.069448505134624400315580038454...||
 
 ## Numeric Table
 [PDF Precision 150](results/pdf_precision150.csv)  
