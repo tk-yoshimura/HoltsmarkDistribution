@@ -55,6 +55,9 @@ Evaluating only one term of this equation yields the tail power of the distribut
 [CDF Precision 150](results/cdf_precision150.csv)  
 [Quantile Precision 142](results/quantile_precision142.csv)  
 
+## Double Precision (IEEE 754) Approx
+[FP64](https://github.com/tk-yoshimura/HoltsmarkDistributionFP64)
+
 ## S&alpha;S Distributions
 ![sass-pdf](figures/sass_pdf.svg)  
 ![sass-pdf-loglog](figures/sass_pdf_loglog.svg)  
