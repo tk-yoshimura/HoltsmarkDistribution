@@ -12,6 +12,20 @@ namespace HoltsmarkExpectedTest {
                     CDFNearZero<Pow2.N16, Pow2.N32>.Value(13.4375, complementary: true),
                 ignore_bits: 2)
             );
+
+            Assert.IsTrue(
+                MultiPrecision<Pow2.N16>.NearlyEqualBits(
+                    CDFN16.Value(13.4375, complementary: true),
+                    CDFNearZero<Pow2.N16, Pow2.N32>.Value(13.4375, complementary: true),
+                ignore_bits: 2)
+            );
+
+            Assert.IsTrue(
+                MultiPrecision<Pow2.N16>.NearlyEqualBits(
+                    CDFN16.Value(13.4375, complementary: true),
+                    CDFLimit<Pow2.N16, N24>.Value(13.4375, complementary: true),
+                ignore_bits: 2)
+            );
         }
 
         [TestMethod]
@@ -19,6 +33,16 @@ namespace HoltsmarkExpectedTest {
             Assert.IsTrue(
                 CDFNearZero<Pow2.N16, N24>.Value(10.625, complementary: true) ==
                 CDFNearZero<Pow2.N16, Pow2.N32>.Value(10.625, complementary: true)
+            );
+
+            Assert.IsTrue(
+                CDFN16.Value(10.625, complementary: true) ==
+                CDFNearZero<Pow2.N16, Pow2.N32>.Value(10.625, complementary: true)
+            );
+
+            Assert.IsTrue(
+                CDFN16.Value(10.625, complementary: true) ==
+                CDFNearZero<Pow2.N16, N24>.Value(10.625, complementary: true)
             );
         }
     }
