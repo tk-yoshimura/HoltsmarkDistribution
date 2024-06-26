@@ -9,12 +9,16 @@ namespace HoltsmarkExpected {
 
             x = MultiPrecision<Pow2.N16>.Abs(x);
 
-            if (x >= 13.4375) {
+            if (x >= 13.5) {
                 return CDFLimit<Pow2.N16, N24>.Value(x, complementary);
             }
 
             if (x <= 10.625) {
                 return CDFNearZero<Pow2.N16, N24>.Value(x, complementary);
+            }
+
+            if (x <= 13.375) {
+                return CDFNearZero<Pow2.N16, Pow2.N32>.Value(x, complementary);
             }
 
             return CDFNearZero<Pow2.N16, Pow2.N32>.Value(x, complementary);

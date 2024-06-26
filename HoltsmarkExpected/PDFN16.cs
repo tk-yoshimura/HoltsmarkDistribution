@@ -9,9 +9,10 @@ namespace HoltsmarkExpected {
                 return PDFLimit<Pow2.N16, N24>.Value(x);
             }
 
-            if (x <= 10.4375) {
+            if (x <= 10.375) {
                 return PDFNearZero<Pow2.N16, N24>.Value(x);
             }
+
             if (x <= 13.25) {
                 return PDFNearZero<Pow2.N16, Pow2.N32>.Value(x);
             }
