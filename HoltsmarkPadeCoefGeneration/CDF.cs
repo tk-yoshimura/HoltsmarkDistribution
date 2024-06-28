@@ -4,31 +4,44 @@ using MultiPrecisionAlgebra;
 using MultiPrecisionCurveFitting;
 
 namespace HoltsmarkPadeCoefGeneration {
-    internal class CDFPadeApproximation {
+    internal class CDF {
         static void Main_() {
             List<(MultiPrecision<Pow2.N64> xmin, MultiPrecision<Pow2.N64> xmax, MultiPrecision<Pow2.N64> limit_range)> ranges = [
                 (0, 1, 1 / 256d)
             ];
 
-            for (MultiPrecision<Pow2.N64> xmin = 1; xmin < 64; xmin *= 2) {
+            for (MultiPrecision<Pow2.N64> xmin = 1; xmin < 256; xmin *= 2) {
                 ranges.Add((xmin, xmin * 2, xmin / 32));
             }
 
-            using (StreamWriter sw = new("../../../../results_disused/pade_cdf_precision150.csv")) {
+            List<(MultiPrecision<Pow2.N64> x, MultiPrecision<Pow2.N64> y)> expecteds = [];
+
+            using (BinaryReader sr = new(File.OpenRead("../../../../results_disused/cdf_precision230.bin"))) {
+                while (sr.BaseStream.Position < sr.BaseStream.Length) {
+                    MultiPrecision<Pow2.N64> x = sr.ReadMultiPrecision<N24>().Convert<Pow2.N64>();
+                    _ = sr.ReadMultiPrecision<N24>().Convert<Pow2.N64>();
+                    MultiPrecision<Pow2.N64> y = sr.ReadMultiPrecision<N24>().Convert<Pow2.N64>();
+
+                    if (x < ranges[0].xmin) {
+                        continue;
+                    }
+
+                    if (x > ranges[^1].xmax) {
+                        break;
+                    }
+
+                    expecteds.Add((x, y));
+                }
+            }
+
+            using (StreamWriter sw = new("../../../../results_disused/pade_cdf_precision151.csv")) {
                 bool approximate(MultiPrecision<Pow2.N64> xmin, MultiPrecision<Pow2.N64> xmax) {
                     Console.WriteLine($"[{xmin}, {xmax}]");
 
-                    bool complementary = CDFN16.Value(xmin.Convert<Pow2.N16>()) > 0.25;
+                    List<(MultiPrecision<Pow2.N64> x, MultiPrecision<Pow2.N64> y)> expecteds_range
+                        = expecteds.Where(item => item.x >= xmin && item.x <= xmax).ToList();
 
-                    List<(MultiPrecision<Pow2.N64> x, MultiPrecision<Pow2.N64> y)> expecteds_range = [];
-
-                    for (MultiPrecision<Pow2.N64> x = xmin, h = (xmax - xmin) / 4096; x <= xmax; x += h) {
-                        MultiPrecision<Pow2.N16> y = CDFN16.Value(x.Convert<Pow2.N16>(), complementary);
-
-                        expecteds_range.Add((x, y.Convert<Pow2.N64>()));
-                    }
-
-                    Console.WriteLine("expecteds computed");
+                    Console.WriteLine($"expecteds {expecteds_range.Count} samples");
 
                     MultiPrecision<Pow2.N64> y0 = expecteds_range.Where(item => item.x == xmin).First().y;
 
@@ -47,22 +60,52 @@ namespace HoltsmarkPadeCoefGeneration {
                             Console.WriteLine($"m={m},n={n}");
                             Console.WriteLine($"{max_rateerr:e20}");
 
-                            if (coefs > 32 && max_rateerr > "1e-50") {
+                            if (coefs > 8 && max_rateerr > "1e-15") {
                                 return false;
                             }
 
-                            if (max_rateerr > "1e-100") {
+                            if (coefs > 16 && max_rateerr > "1e-30") {
+                                return false;
+                            }
+
+                            if (coefs > 32 && max_rateerr > "1e-60") {
+                                return false;
+                            }
+
+                            if (max_rateerr > "1e-50") {
+                                coefs += 16;
                                 break;
                             }
 
-                            if (max_rateerr < "1e-150" &&
+                            if (max_rateerr > "1e-100") {
+                                coefs += 8;
+                                break;
+                            }
+
+                            if (max_rateerr > "1e-135") {
+                                coefs += 4;
+                                break;
+                            }
+
+                            if (max_rateerr > "1e-140") {
+                                coefs += 2;
+                                break;
+                            }
+
+                            if (max_rateerr > "1e-145") {
+                                break;
+                            }
+
+                            if (max_rateerr < "1e-151" &&
                                 !CurveFittingUtils.HasLossDigitsPolynomialCoef(param[..m], 0, xmax - xmin) &&
                                 !CurveFittingUtils.HasLossDigitsPolynomialCoef(param[m..], 0, xmax - xmin)) {
 
                                 sw.WriteLine($"x=[{xmin},{xmax}]");
-                                sw.WriteLine($"complementary={complementary}");
 
                                 sw.WriteLine($"m={m},n={n}");
+                                sw.WriteLine($"expecteds {expecteds_range.Count} samples");
+                                sw.WriteLine($"sample rate {(double)expecteds_range.Count / (param.Dim - 1)}");
+
                                 sw.WriteLine("numer");
                                 foreach (var (_, val) in param[..m]) {
                                     sw.WriteLine($"{val:e155}");

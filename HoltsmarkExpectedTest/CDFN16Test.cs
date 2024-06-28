@@ -3,7 +3,7 @@ using MultiPrecision;
 
 namespace HoltsmarkExpectedTest {
     [TestClass]
-    public class CDFTest {
+    public class CDFN16Test {
         [TestMethod]
         public void LimitTest() {
             for (double x = 16; x >= 4; x -= 0.125) {
