@@ -5,14 +5,12 @@ using MultiPrecisionCurveFitting;
 
 namespace HoltsmarkPadeCoefGeneration {
     internal class CDFLimit {
-        static void Main_() {
+        static void Main() {
             List<(MultiPrecision<Pow2.N64> xmin, MultiPrecision<Pow2.N64> xmax, MultiPrecision<Pow2.N64> limit_range)> ranges = [
-                (0, 1 / 4d, 1 / 4d),
-                (0, 1 / 8d, 1 / 8d),
                 (0, 1 / 16d, 1 / 16d)
             ];
 
-            using (StreamWriter sw = new("../../../../results_disused/pade_cdflimit_precision151_2.csv")) {
+            using (StreamWriter sw = new("../../../../results_disused/pade_cdflimit_precision151.csv")) {
                 bool approximate(MultiPrecision<Pow2.N64> xmin, MultiPrecision<Pow2.N64> xmax) {
                     Console.WriteLine($"[{xmin}, {xmax}]");
 
@@ -47,7 +45,7 @@ namespace HoltsmarkPadeCoefGeneration {
                     Vector<Pow2.N64> ys = expecteds_range.Select(item => item.y).ToArray();
 
                     for (int coefs = 5; coefs <= 100; coefs++) {
-                        foreach ((int m, int n) in CurveFittingUtils.EnumeratePadeDegree(coefs, 8)) {
+                        foreach ((int m, int n) in CurveFittingUtils.EnumeratePadeDegree(coefs, 2)) {
                             PadeFitter<Pow2.N64> pade = new(xs, ys, m, n, intercept: y0);
 
                             Vector<Pow2.N64> param = pade.ExecuteFitting();
