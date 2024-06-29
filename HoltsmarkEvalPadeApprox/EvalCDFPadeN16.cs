@@ -4,13 +4,11 @@ using MultiPrecision;
 
 namespace HoltsmarkEvalPadeApprox {
     internal class EvalCDFPadeN16 {
-        static void Main_() {
+        static void Main() {
             MultiPrecision<Pow2.N16> max_err = "1e-150";
 
             using (StreamWriter sw = new("../../../../results_disused/cdf_pade_eval.csv")) {
                 sw.WriteLine("x,cdferror,ccdferror");
-
-                sw.WriteLine("x,pdf(x),pdf_pade(x),err");
 
                 for (double x = 0; x < 1; x += 1d / 4096) {
                     MultiPrecision<Pow2.N16> cdf_expected = CDFN16.Value(x);
