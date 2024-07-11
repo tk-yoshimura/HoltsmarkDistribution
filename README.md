@@ -58,6 +58,10 @@ Evaluating only one term of this equation yields the tail power of the distribut
 ## Double Precision (IEEE 754) Approx
 [FP64](https://github.com/tk-yoshimura/HoltsmarkDistributionFP64)
 
+## Report
+[ResearchGate](https://www.researchgate.net/publication/382127111_Numerical_Evaluation_and_High_Precision_Approximation_Formula_for_Holtsmark_Distribution)  
+[TechRxiv](https://www.techrxiv.org/users/661998/articles/1150313-numerical-evaluation-and-high-precision-approximation-formula-for-holtsmark-distribution)  
+
 ## S&alpha;S Distributions
 ![sass-pdf](figures/sass_pdf.svg)  
 ![sass-pdf-loglog](figures/sass_pdf_loglog.svg)  
